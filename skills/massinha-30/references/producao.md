@@ -31,7 +31,7 @@ ElevenLabs: https://elevenlabs.io/docs/api-reference/text-to-speech/convert-with
 
 ```
 python3 skills/massinha-30/scripts/pipeline.py voz /caminho/retalhos --env-file /caminho/privado.env --enviar
-python3 skills/massinha-30/scripts/pipeline.py montar /caminho/retalhos --musica /caminho/trilha.mp3 --efeitos /caminho/efeitos.wav
+python3 skills/massinha-30/scripts/pipeline.py montar /caminho/retalhos --ritmo-voz --musica /caminho/trilha.mp3 --efeitos /caminho/efeitos.wav
 python3 skills/massinha-30/scripts/pipeline.py validar /caminho/retalhos/final.mp4
 ```
 

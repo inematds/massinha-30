@@ -1,4 +1,5 @@
 | data | o que quebrou | menor correção | prompt ou infra |
+| 2026-11-16 | Comando principal do guia reproduzia cortes fixos apesar da demonstração seguir a voz | Acrescentar−−ritmo-voz no comando e CTA assistir na hero | prompt |
 | 2026-11-16 | Masterização AAC acrescentou0,1s de cauda no contêiner | Aplicar teto−t30 no áudio e no mux e revalidar:30,004s | infra |
 | 2026-11-16 | Legendas grandes ocupavam três linhas no centro e AAC ultrapassou teto de pico em0,13dB | Ajustar estilo libass15/65 e masterizar áudio em duas passagens com teto−1,5dBTP | prompt |
 | 2026-11-16 | Kling animou pássaro retirando tecido do ninho no plano5 | Pedir soltar o canto do tecido mantendo-o sobre os filhotes; corrigir só esse clipe | prompt |

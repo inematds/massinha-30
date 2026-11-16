@@ -27,10 +27,11 @@ The example waits for explicit script approval. `voz` and `kling` send requests 
 
 ## Status
 
-v1.0.0: skill validated and local tests passing; the demonstration is waiting for script approval. Implemented adapters: official Kling and ElevenLabs. Fish and Agnes are alternatives with no adapter in this toolkit. Check the guide for the latest status.
+v1.1.0: real 30-second demonstration produced with Kling and ElevenLabs; eight local tests passed. Scene cuts and captions aligned with the voice; editable files are available in the Release. Fish and Agnes remain alternatives without an adapter in this kit.
 
 Editing exports limpo.mp4 and final.mp4 (30s, 720×1280, 30fps, H.264/AAC), along with legendas.srt. The original Kling audio is discarded; music and effects are added as separate files. Technical checks do not replace watching the video with sound.
 
 ## License
 
 MIT. Does not include music, font, or brand licenses, or provider terms.
+🎬 [Watch the story](https://inematds.github.io/massinha-30/guia/en/#video) · [MP4](https://github.com/inematds/massinha-30/releases/download/demo-v1.1.0/massinha-30-retalhos.mp4)

@@ -27,10 +27,11 @@ El ejemplo espera la aprobación explícita del guion. `voz` y `kling` solo env�
 
 ## Estado
 
-v1.0.0: skill validada y pruebas locales superadas; la demostración espera la aprobación del guion. Adaptadores implementados: Kling oficial y ElevenLabs. Fish y Agnes son alternativas sin adaptador en este kit. Consulta el estado actualizado en la guía.
+v1.1.0: demostración real de 30 segundos producida con Kling y ElevenLabs; ocho pruebas locales pasaron. Cortes de escena y subtítulos alineados con la voz; los archivos editables están disponibles en la Release. Fish y Agnes siguen como alternativas sin adaptador en este kit.
 
 El montaje exporta limpo.mp4 y final.mp4 (30 s, 720×1280, 30 fps, H.264/AAC), además de legendas.srt. Se descarta el audio original de Kling; la pista musical y los efectos se incorporan como archivos separados. La comprobación técnica no sustituye ver la película con sonido.
 
 ## Licencia
 
 MIT. No incluye licencias de música, fuentes, marcas ni las condiciones de los proveedores.
+🎬 [Ver la historia](https://inematds.github.io/massinha-30/guia/es/#video) · [MP4](https://github.com/inematds/massinha-30/releases/download/demo-v1.1.0/massinha-30-retalhos.mp4)
