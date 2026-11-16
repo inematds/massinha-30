@@ -38,6 +38,23 @@ class StateTest(unittest.TestCase):
     def test_empty_alignment_is_rejected(self):
         with self.assertRaises(ValueError): m.captions({"characters":[],"character_start_times_seconds":[],"character_end_times_seconds":[]})
 
+    def test_env_quoted_spaces_and_inline_comments(self):
+        with tempfile.TemporaryDirectory() as t:
+            p=Path(t)/"config.env"; p.write_text('EXAMPLE_VOICE_ID="abc123 " # narrator\nEXAMPLE_KEY="abc#123"\n')
+            values=m.env_values(p)
+            self.assertEqual(values["EXAMPLE_VOICE_ID"],"abc123")
+            self.assertEqual(values["EXAMPLE_KEY"],"abc#123")
+
+    def test_story_cuts_follow_measured_voice(self):
+        story={"cenas":[{"texto":"A."},{"texto":"B."},{"texto":"C."},{"texto":"D."},{"texto":"E."},{"texto":"F."}]}
+        text="A. B. C. D. E. F."
+        a={"characters":list(text),"character_start_times_seconds":[i*.4 for i in range(len(text))]}
+        durations=m.scene_durations(story,a)
+        self.assertAlmostEqual(sum(durations),30)
+        self.assertAlmostEqual(durations[0],1.2)
+        a["characters"][0]="X"
+        with self.assertRaises(ValueError):m.scene_durations(story,a)
+
     def test_real_character_timestamps_are_preserved(self):
         chars=list("Olá mundo.")
         a={"characters":chars,"character_start_times_seconds":[2+i*.1 for i in range(len(chars))],"character_end_times_seconds":[2.1+i*.1 for i in range(len(chars))]}

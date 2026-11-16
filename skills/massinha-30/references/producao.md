@@ -53,3 +53,5 @@ ffmpeg -filters | grep subtitles
 Use login pela assinatura. CLI é programa usado no terminal; libass desenha as legendas. Em outros sistemas, instale Python, Git, Node LTS e FFmpeg pelos distribuidores oficiais. O filtro subtitles precisa existir.
 
 Para uma voz longa, acrescente `--tomada 2 --velocidade 1.1` ao comando de voz. Máximo de três tomadas, cobradas individualmente, sem mudar palavras. Cada áudio e alinhamento anteriores são preservados. Confira histórico em submissão incerta antes de tentar outra. Se ainda não couber, inicie nova produção com roteiro menor e peça aprovação das novas palavras. Não apague recibos para forçar reenvio.
+
+Para ajustar o corte de cada cena ao início da frase na narração, use `--ritmo-voz` na montagem. O alinhamento precisa conter o roteiro integral. Os tempos são arredondados a quadros de30fps, somam30s e ficam em `edicao.json`. Uma cena que dura mais que5,75s mantém o último quadro no restante, sem esticar demais a ação.
